@@ -15,18 +15,18 @@
         <div class="row">
             <div class="col-12" style="height: 10px; background-color: #D3D3D3"></div>
         </div>
-        <div class="row" style="height: 100px; background-color: #FFFFFF">
-            <div class="col"><img src="img/imagen_2022-11-10_124712509-removebg-preview.png" width="250px" height="140px"></div>
+        <div class="row" style="height: 160px; background-color: #FFFFFF">
+            <div class="col-4 mb-2 mt-2"><img src="img/FrikiLuko.png" width="250px" height="140px"></div>
         </div>
     </div>
     <div class="container">
         <div class="row mt-2 mb-2" style="height: 100px; background-color: #BA181B">
             <div class="col-2 mt-4"></div>
             <div class="col-2 mt-4">
-                <a href = ""><button type="button" class="btn btn-secondary">Inicio</button></a>
+                <a href = "index.php"><button type="button" class="btn btn-secondary">Inicio</button></a>
             </div>
             <div class="col-2 mt-4">
-                <a href = ""><button type="button" class="btn btn-secondary">Iniciar sesión</button></a>
+                <a href = "login.php"><button type="button" class="btn btn-secondary">Iniciar sesión</button></a>
             </div>
             <div class="col-2 mt-4">
                 <a href = ""><button type="button" class="btn btn-secondary">Servicios</button></a>
@@ -50,10 +50,10 @@
                                 <br><br>
                                 <label for="Contraseña"><FONT COLOR="#FFFFFF"> Contraseña: </FONT></label>
                                 <input type="text" class="form-control" name="Contraseña" id="Contraseña">
-                                <a href = "login.php"><FONT COLOR="#FFFFFF"> Olvido su contraseña?</FONT></a>
+                                <a href = "recuperar.php"><FONT COLOR="#FFFFFF"> Olvido su contraseña?</FONT></a>
                                 <br>
                                 <button type="button" class="btn btn-secondary">Iniciar sesión</button>
-                                <button type="button" class="btn btn-secondary">Registrarse</button>
+                                <a href = "register.php"><button type="button" class="btn btn-secondary">Registrarse</button></a>
                             </form>
                         </div>
                     </div>
@@ -64,8 +64,7 @@
     <div class="container">
         <div class="row mt-2" style="background-color: #BA181B">
             <div class="col-12 mt-2 d-flex justify-content-center"></div>
-            <div class="col-1"></div>
-            <div class="col-1"></div>
+            <div class="col mb-2"><img src="img/Logo White.png" width="250px" height="140px"></div>
             <div class="col-1"></div>
             <div class="col-1"></div>
             <div class="col-1"></div>
