@@ -1,15 +1,7 @@
 <?php
-
-$conexion = "localhost";
-$user = "claudio";
-$pass = "12345";
-$db = "prueba3_test";
-
-$con = mysqli_connect($conexion, $user, $pass, $db);
-
-
-if(!$con)
-{
-    die("Conexion Fallida");
-}
+    $host = "localhost";
+    $usuario = "root";
+    $pasword = "";
+    $db = "bd_prueba_3";
+    $conexion = mysqli_connect($host, $usuario, $pasword, $db);
 ?>

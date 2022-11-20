@@ -44,11 +44,11 @@
                     <div class="row border rounded" style="height: 300px; background-color: #BA181B">
                         <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF">Recuperar contraseña</FONT></div>
                         <div class="col mt-2 d-flex justify-content-center">
-                            <form>
+                            <form  action="recuperarCod.php" method="POST">
                                 <label"><FONT COLOR="#FFFFFF"> Correo electronico: </FONT></label>
-                                <input type="text" class="form-control" name="Rut" id="Rut"/>
+                                <input type="text" class="form-control" name="Correo" id="Correo"/>
                                 <br>
-                                <button type="button" class="btn btn-secondary">Enviar</button>
+                                <button type="submit" class="btn btn-secondary">Enviar</button>
                                 <a href = "login.php"><button type="button" class="btn btn-secondary">Volver</button></a>
                             </form>
                         </div>

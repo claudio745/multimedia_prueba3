@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
+    <title>Servicios</title>
 
      <!-- Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 <div class="container" style="background-color: #D3D3D3">
     <div class="container">
         <div class="row">
@@ -39,26 +42,11 @@
         </div>
     </div>
     <div class="container">
-        <div class="row" style="height: 350px; background-color: #F5F3F4">
-            <div class="col mt-4 d-flex justify-content-center">
-                <div class="Inicio">
-                    <div class="row border rounded" style="height: 300px; background-color: #BA181B">
-                        <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF">Inicio sesión </FONT></div>
-                        <div class="col mt-2 d-flex justify-content-center">
-                            <form action="ingresar.php" method="POST">
-                                <label"><FONT COLOR="#FFFFFF"> Rut: </FONT></label>
-                                <input type="text" class="form-control" name="Rut" id="Rut" placeholder="11111111-1"/>
-                                <br><br>
-                                <label for="Contraseña"><FONT COLOR="#FFFFFF"> Contraseña: </FONT></label>
-                                <input type="text" class="form-control" name="Contraseña" id="Contraseña">
-                                <a href = "recuperar.php"><FONT COLOR="#FFFFFF"> Olvido su contraseña?</FONT></a>
-                                <br>
-                                <button type="submit" class="btn btn-secondary">Iniciar sesión</button>
-                                <a href = "register.php"><button type="button" class="btn btn-secondary">Registrarse</button></a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+        <div class="row mt-2">
+            <div class="col-8 d-flex justify-content-center" style="height: 300px; background-color: #FFFFFF">
+            </div>
+            <div class="col-4" style="height: 300px">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.343839676881!2d-71.64372688484877!3d-33.021070682989496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e791a85771c9%3A0x7a2bafc4dd3ed810!2sFacultad%20de%20Ingenier%C3%ADa%20-Universidad%20de%20Playa%20Ancha!5e0!3m2!1ses!2scl!4v1668826154531!5m2!1ses!2scl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>

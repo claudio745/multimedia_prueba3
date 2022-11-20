@@ -33,10 +33,10 @@
                 <a href = "login.php"><button type="button" class="btn btn-secondary">Iniciar sesión</button></a>
             </div>
             <div class="col-2 mt-4">
-                <a href = ""><button type="button" class="btn btn-secondary">Servicios</button></a>
+                <a href = "servicios.php"><button type="button" class="btn btn-secondary">Servicios</button></a>
             </div>
             <div class="col-2 mt-4">
-                <a href = ""><button type="button" class="btn btn-secondary">Estadisticas</button></a>
+                <a href = "estadistica.php"><button type="button" class="btn btn-secondary">Estadisticas</button></a>
             </div>
             <div class="col-2 mt-4"></div>
         </div>
@@ -52,24 +52,24 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img src="img/18764668.png" class="d-block w-100" height="300px">
+                    <img src="img/meme.jpg" class="d-block w-100" height="300px">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5><FONT COLOR="BLACK">First slide label</FONT></h5>
-                        <p><FONT COLOR="BLACK">Some representative placeholder content for the first slide.</FONT></p>
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
                     </div>
                     </div>
                     <div class="carousel-item">
-                    <img src="img/18764668.png" class="d-block w-100" height="300px">
+                    <img src="img/meme.jpg" class="d-block w-100" height="300px">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5><FONT COLOR="BLACK">Second slide label</FONT></h5>
-                        <p><FONT COLOR="BLACK">Some representative placeholder content for the second slide.</FONT></p>
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
                     </div>
                     </div>
                     <div class="carousel-item">
-                    <img src="img/18764668.png" class="d-block w-100" height="300px">
+                    <img src="img/meme.jpg" class="d-block w-100" height="300px">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5><FONT COLOR="BLACK">Third slide label</FONT></h5>
-                        <p><FONT COLOR="BLACK">Some representative placeholder content for the third slide.</FONT></p>
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
                     </div>
                     </div>
                 </div>

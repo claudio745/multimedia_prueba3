@@ -38,13 +38,13 @@
         </div>
     </div>
     <div class="container">
-        <div class="row" style="height: 1000px; background-color: #F5F3F4">
+        <div class="row" style="height: 1150px; background-color: #F5F3F4">
             <div class="col mt-4 d-flex justify-content-center">
                 <div class="Inicio">
-                    <div class="row border rounded" style="height: 950px; background-color: #BA181B">
+                    <div class="row border rounded" style="height: 1100px; background-color: #BA181B">
                         <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF">Registrarse </FONT></div>
                         <div class="col mt-2 mb-2 d-flex justify-content-center">
-                            <form>
+                            <form action="registrar.php" method="POST">
                                 <label"><FONT COLOR="#FFFFFF"> Nombres: </FONT></label>
                                 <input type="text" class="form-control" name="Nombres" id="Nombres"/>
                                 <br><br>
@@ -62,10 +62,13 @@
                                 </select>
                                 <br><br>
                                 <label"><FONT COLOR="#FFFFFF"> Fecha de nacimiento: </FONT></label>
-                                <input type="date" class="form-control" name="Fecha" id="Fecha" value="2022-11-04" min="1900-01-01" max="2004-01-01"> 
+                                <input type="date" class="form-control" name="Fecha" id="Fecha" min="1900-01-01" max="2016-01-01"> 
                                 <br><br>
                                 <label"><FONT COLOR="#FFFFFF"> Ciudad de residencia: </FONT></label>
                                 <input type="text" class="form-control" name="Ciudad" id="Ciudad"/>
+                                <br><br>
+                                <label"><FONT COLOR="#FFFFFF"> Correo </FONT></label>
+                                <input type="text" class="form-control" name="Correo" id="Correo"/>
                                 <br><br>
                                 <label"><FONT COLOR="#FFFFFF"> Rut: </FONT></label>
                                 <input type="text" class="form-control" name="Rut" id="Rut" placeholder="11111111-1"/>
@@ -73,7 +76,7 @@
                                 <label for="Contraseña"><FONT COLOR="#FFFFFF"> Contraseña: </FONT></label>
                                 <input type="text" class="form-control" name="Contraseña" id="Contraseña">
                                 <br>
-                                <button type="button" class="btn btn-secondary">Registrarse</button>
+                                <button type="submit" class="btn btn-secondary">Registrarse</button>
                                 <a href = "login.php"><button type="button" class="btn btn-secondary">Volver</button></a>
                             </form>
                         </div>
