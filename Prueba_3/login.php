@@ -51,7 +51,7 @@
                                 <br><br>
                                 <label for="Contraseña"><FONT COLOR="#FFFFFF"> Contraseña: </FONT></label>
                                 <input type="text" class="form-control" name="Contraseña" id="Contraseña">
-                                <a href = "recuperar.php"><FONT COLOR="#FFFFFF"> Olvido su contraseña?</FONT></a>
+                                <a href = "recuperar.php"><FONT COLOR="#FFFFFF"> Olvido su contrasena?</FONT></a>
                                 <br>
                                 <button type="submit" class="btn btn-secondary">Iniciar sesión</button>
                                 <a href = "register.php"><button type="button" class="btn btn-secondary">Registrarse</button></a>
