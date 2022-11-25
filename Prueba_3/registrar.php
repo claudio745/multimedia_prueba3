@@ -16,8 +16,9 @@ else{
     $Rut=$_POST['Rut'];
     $Contraseña=$_POST['Contraseña'];
 
+    $pass = password_hash($pass, PASSWORD_DEFAULT, [10]);
     $query = "INSERT INTO paciente (nombres, apellido1, apellido2, genero, fechaNacim, ciudadResid, correo, rut, contraseña)
-    VALUES ('$Nombres', '$Apellido1', '$Apellido2', '$Genero', '$Fecha', '$Ciudad', '$Correo', '$Rut', '$Contraseña')";
+    VALUES ('$Nombres', '$Apellido1', '$Apellido2', '$Genero', '$Fecha', '$Ciudad', '$Correo', '$Rut', '$pass')";
     $resultado = $conexion->query($query);
     
      header("Location: http://127.0.0.1/multimedia_prueba3/Prueba_3/login.php");
