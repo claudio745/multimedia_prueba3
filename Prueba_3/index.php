@@ -32,12 +32,12 @@
             <div class="col-2 mt-4">
                 <a href = "login.php"><button type="button" class="btn btn-secondary">Iniciar sesión</button></a>
             </div>
-            <div class="col-2 mt-4">
+        <!--    <div class="col-2 mt-4">
                 <a href = "servicios.php"><button type="button" class="btn btn-secondary">Servicios</button></a>
-            </div>
-            <div class="col-2 mt-4">
+            </div> -->
+        <!--    <div class="col-2 mt-4">
                 <a href = "estadistica.php"><button type="button" class="btn btn-secondary">Estadisticas</button></a>
-            </div>
+            </div> -->
             <div class="col-2 mt-4"></div>
         </div>
     </div>
