@@ -12,7 +12,7 @@ else{
     $Genero=$_POST['Genero'];
     $Fecha=$_POST['Fecha'];
     $Ciudad=$_POST['Ciudad'];
-    $Ciudad=$_POST['Correo'];
+    $Correo=$_POST['Correo'];
     $Rut=$_POST['Rut'];
     $Contraseña=$_POST['Contraseña'];
 
