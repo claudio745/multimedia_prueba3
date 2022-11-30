@@ -35,9 +35,9 @@
             <div class="col-2 mt-4">
                 <a href = "servicios.php"><button type="button" class="btn btn-secondary">Servicios</button></a>
             </div> 
-            <div class="col-2 mt-4">
+        <!--    <div class="col-2 mt-4">
                 <a href = "estadistica.php"><button type="button" class="btn btn-secondary">Estadisticas</button></a>
-            </div>
+            </div> -->
             <div class="col-2 mt-4"></div>
         </div>
     </div>
@@ -87,15 +87,11 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.343839676881!2d-71.64372688484877!3d-33.021070682989496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e791a85771c9%3A0x7a2bafc4dd3ed810!2sFacultad%20de%20Ingenier%C3%ADa%20-Universidad%20de%20Playa%20Ancha!5e0!3m2!1ses!2scl!4v1668826154531!5m2!1ses!2scl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="col-8" style="height: 10px; background-color: #D3D3D3"></div>
-            <div class="col-8" style="height: 300px; background-color: #FFFFFF">
-            <a><button type="button" class="btn btn-secondary">Modificar</button></a>
-            <a><button type="button" class="btn btn-secondary">Eliminar</button></a>
-        
-            </div>
+            <div class="col-8" style="height: 300px; background-color: #FFFFFF"></div>
         </div>
     </div>
     <div class="container">
-        <div class="row mt-2" style="background-color: #BA181B">    
+        <div class="row mt-2" style="background-color: #BA181B">
             <div class="col-12 mt-2 d-flex justify-content-center"></div>
             <div class="col mb-2"><img src="img/Logo White.png" width="250px" height="140px"></div>
             <div class="col-1"></div>
