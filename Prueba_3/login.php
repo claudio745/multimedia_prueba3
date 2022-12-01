@@ -39,7 +39,7 @@
                     <div class="row border rounded" style="height: 300px; background-color: #BA181B">
                         <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF">Inicio sesión </FONT></div>
                         <div class="col mt-2 d-flex justify-content-center">
-                            <form action="ingresar.php" method="POST">
+                            <form action="ingresarCodigo.php" method="POST">
                                 <label"><FONT COLOR="#FFFFFF"> Rut: </FONT></label>
                                 <input type="text" class="form-control" name="Rut" id="Rut" placeholder="11111111-1"/>
                                 <br><br>
