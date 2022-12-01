@@ -2,21 +2,27 @@
 
 require_once('conexionCodigo.php');
 
-if (empty($_POST['Rut']) || empty($_POST['Contraseña'])){
+if (empty($_POST['Rut']) || empty($_POST['Contraseña']))
+{
   header("Location: http://127.0.0.1/multimedia_prueba3/login.php");
 }
-else{
+else
+{
   $Rut=$_POST['Rut'];
   $Contraseña=$_POST['Contraseña'];
-  $consulta = "SELECT COUNT(rut) AS existe, contraseña FROM usuario WHERE rut='$Rut'";
+  $consulta = "SELECT COUNT(rut) AS existe, contraseña FROM usuario WHERE rut='$Rut' LIMIT 1";
   $resultado = mysqli_query($conexion, $consulta);
-
-  while ($row = mysqli_fetch_array($resultado)){
+  while ($row = mysqli_fetch_array($resultado))
+  {
+    echo "<pre>";
+    print_r ($row);
+    var_dump(password_verify('mnb123', $row["contraseña"]));
+    echo "</pre>";
     if($row["existe"] == 1 || password_verify($Contraseña, $row["contraseña"])){
-      header("Location: http://127.0.0.1/multimedia_prueba3/usuarioIndex.php");
+      /*header("Location: http://127.0.0.1/multimedia_prueba3/usuarioIndex.php");*/
     }
     else{
-      header("Location: http://127.0.0.1/multimedia_prueba3/login.php");
+      /*header("Location: http://127.0.0.1/multimedia_prueba3/login.php");*/
     }
   }
 }
