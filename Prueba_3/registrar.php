@@ -17,7 +17,7 @@ else{
     $Contraseña=$_POST['Contraseña'];
 
     $pass = password_hash($pass, PASSWORD_DEFAULT, [10]);
-    $query = "INSERT INTO paciente (nombres, apellido1, apellido2, genero, fechaNacim, ciudadResid, correo, rut, contraseña)
+    $query = "INSERT INTO usuario (nombres, apellido1, apellido2, genero, fechaNacim, ciudadResid, correo, rut, contraseña)
     VALUES ('$Nombres', '$Apellido1', '$Apellido2', '$Genero', '$Fecha', '$Ciudad', '$Correo', '$Rut', '$pass')";
     $resultado = $conexion->query($query);
     

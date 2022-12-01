@@ -68,13 +68,13 @@
                                 <input type="text" class="form-control" name="Ciudad" id="Ciudad"/>
                                 <br><br>
                                 <label"><FONT COLOR="#FFFFFF"> Correo </FONT></label>
-                                <input type="text" class="form-control" name="Correo" id="Correo"/>
+                                <input type="email" class="form-control" name="Correo" id="Correo"/>
                                 <br><br>
                                 <label"><FONT COLOR="#FFFFFF"> Rut: </FONT></label>
                                 <input type="text" class="form-control" name="Rut" id="Rut" placeholder="11111111-1"/>
                                 <br><br>
                                 <label for="Contraseña"><FONT COLOR="#FFFFFF"> Contraseña: </FONT></label>
-                                <input type="text" class="form-control" name="Contraseña" id="Contraseña">
+                                <input type="password" class="form-control" name="Contraseña" id="Contraseña">
                                 <br>
                                 <button type="submit" class="btn btn-secondary">Registrarse</button>
                                 <a href = "login.php"><button type="button" class="btn btn-secondary">Volver</button></a>

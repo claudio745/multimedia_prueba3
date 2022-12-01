@@ -44,7 +44,7 @@
                                 <input type="text" class="form-control" name="Rut" id="Rut" placeholder="11111111-1"/>
                                 <br><br>
                                 <label for="Contraseña"><FONT COLOR="#FFFFFF"> Contraseña: </FONT></label>
-                                <input type="text" class="form-control" name="Contraseña" id="Contraseña">
+                                <input type="password" class="form-control" name="Contraseña" id="Contraseña">
                                 <a href = "recuperar.php"><FONT COLOR="#FFFFFF"> Olvido su contrasena?</FONT></a>
                                 <br>
                                 <button type="submit" class="btn btn-secondary">Iniciar sesión</button>
