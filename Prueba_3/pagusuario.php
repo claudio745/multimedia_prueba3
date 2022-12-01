@@ -27,7 +27,7 @@
         <div class="row mt-2 mb-2" style="height: 100px; background-color: #BA181B">
             <div class="col-2 mt-4"></div>
             <div class="col-2 mt-4">
-                <a href = "index.php"><button type="button" class="btn btn-secondary">Inicio</button></a>
+                <a href = "pagusuario.php"><button type="button" class="btn btn-secondary">Inicio</button></a>
             </div>
             <div class="col-2 mt-4">
                 <a href = "login.php"><button type="button" class="btn btn-secondary">Iniciar sesión</button></a>
