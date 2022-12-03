@@ -72,13 +72,10 @@
         <div class="row mt-2 mb-2" style="height: 100px; background-color: #BA181B">
             <div class="col-2 mt-4"></div>
             <div class="col-2 mt-4">
-                <a href = "index.php"><button type="button" class="btn btn-secondary">Inicio</button></a>
+                <a href = "adminIndex.php"><button type="button" class="btn btn-secondary">Inicio</button></a>
             </div>
             <div class="col-2 mt-4">
-                <a href = "servicios.php"><button type="button" class="btn btn-secondary">Servicios</button></a>
-            </div>
-            <div class="col-2 mt-4">
-                <a href = "estadistica.php"><button type="button" class="btn btn-secondary">Estadisticas</button></a>
+                <a href = "adminEstadistica.php"><button type="button" class="btn btn-secondary">Estadisticas</button></a>
             </div>
             <div class="col-2 mt-4">
                 <a href = "index.php"><button type="button" class="btn btn-secondary">Cerrar Sesión</button></a>
