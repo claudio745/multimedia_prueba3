@@ -28,12 +28,6 @@
             <div class="col-2 mt-4">
                 <a href = "login.php"><button type="button" class="btn btn-secondary">Iniciar sesión</button></a>
             </div>
-            <div class="col-2 mt-4">
-                <a href = ""><button type="button" class="btn btn-secondary">Servicios</button></a>
-            </div>
-            <div class="col-2 mt-4">
-                <a href = ""><button type="button" class="btn btn-secondary">Estadisticas</button></a>
-            </div>
             <div class="col-2 mt-4"></div>
         </div>
     </div>
@@ -44,7 +38,7 @@
                     <div class="row border rounded" style="height: 300px; background-color: #BA181B">
                         <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF">Recuperar contraseña</FONT></div>
                         <div class="col mt-2 d-flex justify-content-center">
-                            <form  action="recuperarCod.php" method="POST">
+                            <form  action="recuperarCodigo.php" method="POST">
                                 <label"><FONT COLOR="#FFFFFF"> Correo electronico: </FONT></label>
                                 <input type="text" class="form-control" name="Correo" id="Correo"/>
                                 <br>

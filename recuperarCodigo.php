@@ -1,6 +1,6 @@
 <?php
 
-require_once('conexion.php');
+require_once('conexionCodigo.php');
 
 if (empty($_POST['Correo'])){
   header("Location: http://127.0.0.1/multimedia_prueba3/recuperar.php");
@@ -8,14 +8,14 @@ if (empty($_POST['Correo'])){
 else{
   $Correo=$_POST['Correo'];
   
-  $consulta = "SELECT COUNT(rut) AS existe FROM paciente WHERE correo='$Correo'";
+  $consulta = "SELECT COUNT(rut) AS existe FROM usuario WHERE correo='$Correo' LIMIT 1";
   $cont = mysqli_query($conexion, $consulta);
   while ($row = mysqli_fetch_array($cont)){
-    if($row["existe"] == 0){
-      header("Location: http://127.0.0.1/multimedia_prueba3/recuperar.php");
+    if($row["existe"] == 1){
+      header("Location: http://127.0.0.1/multimedia_prueba3/login.php");
     }
     else{
-      header("Location: http://127.0.0.1/multimedia_prueba3/login.php");
+      header("Location: http://127.0.0.1/multimedia_prueba3/recuperar.php");
     }
   }
 }
