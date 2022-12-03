@@ -44,7 +44,7 @@
                     <div class="row border rounded" style="height: 1100px; background-color: #BA181B">
                         <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF">Registrarse </FONT></div>
                         <div class="col mt-2 mb-2 d-flex justify-content-center">
-                            <form action="registrar.php" method="POST">
+                            <form action="registrarCodigo.php" method="POST">
                                 <label"><FONT COLOR="#FFFFFF"> Nombres: </FONT></label>
                                 <input type="text" class="form-control" name="Nombres" id="Nombres"/>
                                 <br><br>
