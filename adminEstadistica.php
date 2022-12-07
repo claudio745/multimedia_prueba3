@@ -10,6 +10,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!--Consultas-->
+    <?php 
+        require_once('conexionCodigo.php');
+        
+        //Grafico de torta
+        $consultaUsuarios = "SELECT count(rut) AS cantidad FROM usuario";
+        $consultaUsuarios = $conexion->query($consultaUsuarios);
+        $fila = mysqli_fetch_assoc($consultaUsuarios);
+
+        $consultaPersonal = "SELECT cargo, count(rut) AS cantidad FROM personal GROUP BY cargo";
+        $consultaPersonal= mysqli_query($conexion, $consultaPersonal);
+
+        //Grafico de barras
+        $jovenUsuarios = "SELECT count(rut) AS cantidad FROM usuario WHERE fechaNacim > '01/01/2005'";
+        $jovenUsuarios = $conexion->query($jovenUsuarios);
+        $fila1 = mysqli_fetch_assoc($jovenUsuarios);
+        $adultoUsuarios = "SELECT count(rut) AS cantidad FROM usuario WHERE fechaNacim < '01/01/2005' AND fechaNacim > '01/01/1961'";
+        $adultoUsuarios = $conexion->query($adultoUsuarios);
+        $fila2 = mysqli_fetch_assoc($adultoUsuarios);
+        $adultoMayorUsuarios = "SELECT count(rut) AS cantidad FROM usuario WHERE fechaNacim < '01/01/1961'";
+        $adultoMayorUsuarios = $conexion->query($adultoMayorUsuarios);
+        $fila3 = mysqli_fetch_assoc($adultoMayorUsuarios);
+    ?>
     
     <!--Grafico de Torta-->
     <script type="text/javascript">
@@ -18,18 +42,19 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Nacionalidad', 'Usuarios'],
-          ['Chileno',     11],
-          ['Canadiense',      2],
-          ['Uruguaya',  2],
+            ['cargo', 'cantidad'],
+            <?php
+                while ($row = mysqli_fetch_array($consultaPersonal)) {
+                    echo "['" . $row["cargo"] . "', " . $row["cantidad"] . "],";
+                }
+            ?>
         ]);
 
         var options = {
-          title: 'Estadistica Usuarios'
+          title: 'Cantidades de roles otorgados'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
         chart.draw(data, options);
         }
     </script>
@@ -41,9 +66,9 @@
         function drawChart() {
         var data = google.visualization.arrayToDataTable([
             ['Vida', 'Edad', { role: 'style' }],
-            ['Joven', 16, 'red'],            
-            ['Adulto', 45, 'blue'],            
-            ['Adulto mayor', 80, 'green'],
+            ['Joven', <?php echo $fila1['cantidad'] ?>, 'red'],            
+            ['Adulto', <?php echo $fila2['cantidad'] ?>, 'blue'],            
+            ['Adulto mayor', <?php echo $fila3['cantidad'] ?>, 'green'],
         ]);
 
         var options = {'title':'Edad usuarios',
@@ -83,7 +108,8 @@
         </nav>
     </div>
     <!--Fila de los Graficos-->
-    <div class="row" style="height: 300px; background-color: #FFFFFF">
+    <div class="row" style="height: 400px; background-color: #FFFFFF">
+        <div class="col-12">Cantidad de Usuarios registrados: <?php echo $fila['cantidad'] ?></div>
         <div class="col-8 d-flex justify-content-center" style="height: 300px; background-color: #FFFFFF">
             <div id="chart_div"></div>
         </div>

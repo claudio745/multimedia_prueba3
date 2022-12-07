@@ -18,5 +18,5 @@ else{
     VALUES ('$Nombres', '$Apellido1', '$Apellido2', '$Cargo', '$Rut', '$pass')";
     $resultado = $conexion->query($query);
     
-    header("Location: http://127.0.0.1/multimedia_prueba3/login.php");
+    header("Location: http://127.0.0.1/multimedia_prueba3/adminEstadistica.php");
 }

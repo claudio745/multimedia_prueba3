@@ -24,7 +24,7 @@ else
     $fila = mysqli_fetch_assoc($resultado);
 
     if(password_verify($Contraseña, $fila['contraseña'])){
-      if($fila['cargo'] == 1 || $fila['cargo'] == 3){
+      if($fila['cargo'] == 'Administrador' || $fila['cargo'] == 'Operador'){
         header("Location: http://127.0.0.1/multimedia_prueba3/adminIndex.php");
       }else{
         header("Location: http://127.0.0.1/multimedia_prueba3/login.php");

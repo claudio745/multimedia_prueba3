@@ -91,8 +91,9 @@
                         ?>   
                         <table class="table table-bordered">
                             <?php
+                            $nro = 1;
                             //Seleciono todo de la tabla noticia
-                            $sql="SELECT * FROM noticia";
+                            $sql="SELECT * FROM noticia WHERE id = $nro";
                             $result=mysqli_query($conexion, $sql);
 
                             //ordeno imprimir
@@ -101,40 +102,26 @@
 
                             <div class="row">
                                 <div class="col-2 mt-2">
-                                    <img width="200px" height="200px" src="data:foto/jpg;base64,<?php echo base64_encode($mostrar['foto']);?>"/>
+                                    <img width="250px" height="250px" src="data:foto/jpg;base64,<?php echo base64_encode($mostrar['img']);?>"/>
                                 </div>
                                 <div class="col-10 mt-4">
-                                    <h2><?php echo $mostrar['nombres']?> <?php echo $mostrar['apellidos']?></h2>
-                                    <h5>Rut: <?php echo $mostrar['rut']?></h5>
+                                    <h2><?php echo $mostrar['titulo']?></h2>
+                                    <h5><?php echo $mostrar['cuerpo']?></h5>
+                                    <h6><?php echo $mostrar['categoria']?></h6>
+                                    <h6><?php echo $mostrar['autor']?></h6>
                                 </div>
                             </div>
-                            <div class="row">
-                                <h3>Datos: </h3>
-                            </div>
-                            <div class="row"></div>
-                            <div class="row"></div>
-
-                            <tr>
-                                <h5> ■ Fecha nacimiento: <?php echo $mostrar['fecha_nacim']?></h5>
-                                <h5> ■ Nacionalidad: <?php echo $mostrar['nacionalidad']?></h5>
-                                <h5> ■ Genero: <?php echo $mostrar['genero']?></h5>
-                                <h5> ■ Ciudad de residencia: <?php echo $mostrar['ciudad_residencia']?></h5>
-                            </tr>
-                            <br><br><br><br><br><br><br>
-                            <a href="generarpdf.php?r=<?php echo $mostrar['rut'];?>"><button type="button" class="btn btn-danger">Descargar PDF</button></a>
-
                             <?php
                             }
                             ?>
-
                         </table>
                     </div>
                 </div>
                 <div class="col-11"></div>
                 <div class="col-1 mb-2">
                     <div class="btn-group me-2" role="group" aria-label="Second group">
-                        <button type="button" class="btn btn-secondary"><-</button>
-                        <button type="button" class="btn btn-secondary">-></button>
+                        <button onclick="funcionRestar()" type="button" class="btn btn-secondary"><-</button>
+                        <button onclick="funcionSumar()" type="button" class="btn btn-secondary">-></button>
                     </div>
                 </div>
             </div>

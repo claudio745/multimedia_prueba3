@@ -60,9 +60,9 @@
                             <br>
                             <label"><FONT COLOR="#FFFFFF"> Cargo: </FONT></label>
                             <select name="Cargo" class="form-control" id="Cargo">
-                                <option value=1>Administrador</option>
-                                <option value=2>Medico</option>
-                                <option value=3>Operador</option>
+                                <option value=Administrador>Administrador</option>
+                                <option value=Medico>Medico</option>
+                                <option value=Operador>Operador</option>
                             </select>
                             <br>
                             <button type="submit" class="btn btn-secondary">Registrar</button>
