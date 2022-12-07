@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios</title>
+    <title>Inicio</title>
 
      <!-- Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -13,58 +13,55 @@
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-<div class="container" style="background-color: #D3D3D3">
-    <div class="container">
-        <div class="row">
-            <div class="col-12" style="height: 10px; background-color: #D3D3D3"></div>
-        </div>
-        <div class="row" style="height: 160px; background-color: #FFFFFF">
-            <div class="col-4 mb-2 mt-2"><img src="img/FrikiLuko.png" width="250px" height="140px"></div>
-            <div class="col-4 mt-2 d-flex justify-content-center"><H1>Hospital</H1></div>
+<div class="container-fluid" style="background-color: #D3D3D3">
+    <!--Fila del Header-->
+    <div class="row mt-2" style="background-color: #FFFFFF">
+        <div class="col-6 mb-2"><img src="img/FrikiLuko.png" width="250px" height="140px"></div>
+        <div class="col-6 mb-2"><H1>HOSPITAL</H1></div>
+    </div>
+    <!--Fila del Main-->
+    <div class="row" style="background-color: #BA181B">
+        <nav class="navbar navbar-expand-lg" style="background-color: #BA181B">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/LogorecortedWhite.png" alt="" width="50" height="35">
+                </a>
+                <a class="navbar-brand" href="usuarioIndex.php"><FONT COLOR="#FFFFFF">INICIO</FONT></a>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="usuarioServicios.php"><FONT COLOR="#FFFFFF">Servicios</FONT></a>
+                        <a class="nav-link" href="index.php"><FONT COLOR="#FFFFFF">Cerrar sesión</FONT></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--Fila Servicios-->
+    <div class="row" style="height: 350px; background-color: #FFFFFF">
+        <div class="col mt-4 d-flex justify-content-center">
+            <div class="Servicios">
+                <div class="row border rounded" style="height: 300px; background-color: #BA181B">
+                    <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF"><H4>Servicios Disponibles</H4></FONT></div>
+                    <div class="col mt-2 d-flex justify-content-center">
+                        <form action="ingresarCodigo.php" method="POST">
+                            <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+                                <a href = "register.php"><button type="button" class="btn btn-outline-secondary">Solicitar hora</button></a>
+                                <a href = "register.php"><button type="button" class="btn btn-outline-secondary">Generar PDF</button></a>
+                                <a href = "register.php"><button type="button" class="btn btn-outline-secondary">Generar QR</button></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row mt-2 mb-2" style="height: 100px; background-color: #BA181B">
-            <div class="col-2 mt-4"></div>
-            <div class="col-2 mt-4">
-                <a href = "usuarioIndex.php"><button type="button" class="btn btn-secondary">Inicio</button></a>
-            </div>
-            <div class="col-2 mt-4">
-                <a href = "usuarioServicios.php"><button type="button" class="btn btn-secondary">Servicios</button></a>
-            </div>
-            <div class="col-2 mt-4">
-                <a href = "index.php"><button type="button" class="btn btn-secondary">Cerrar Sesión</button></a>
-            </div>
-            <div class="col-2 mt-4"></div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row mt-2">
-            <div class="col-8 d-flex justify-content-center" style="height: 300px; background-color: #FFFFFF">
-            </div>
-            <div class="col-4" style="height: 300px">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.343839676881!2d-71.64372688484877!3d-33.021070682989496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e791a85771c9%3A0x7a2bafc4dd3ed810!2sFacultad%20de%20Ingenier%C3%ADa%20-Universidad%20de%20Playa%20Ancha!5e0!3m2!1ses!2scl!4v1668826154531!5m2!1ses!2scl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row mt-2" style="background-color: #BA181B">
-            <div class="col-12 mt-2 d-flex justify-content-center"></div>
-            <div class="col mb-2"><img src="img/Logo White.png" width="250px" height="140px"></div>
-            <div class="col-1"></div>
-            <div class="col-1"></div>
-            <div class="col-1"></div>
-            <div class="col-1"></div>
-            <div class="col-1"></div>
-            <div class="col-1"><img src="img/18764668.png" width="50px" height="50px" class="rounded-circle"></div>
-            <div class="col-1"><img src="img/18764668.png" width="50px" height="50px" class="rounded-circle"></div>
-            <div class="col-1"><img src="img/18764668.png" width="50px" height="50px" class="rounded-circle"></div>
-            <div class="col-1"><img src="img/18764668.png" width="50px" height="50px" class="rounded-circle"></div>
-            <div class="col-1"></div>
-        </div>
-        <div class="row">
-            <div class="col-12" style="height: 10px; background-color: #D3D3D3"></div>
-        </div>
+    <!--Fila del Footer-->
+    <div class="row mt-2" style="background-color: #BA181B">
+        <div class="col mb-2"><img src="img/Logo White.png" width="250px" height="140px"></div>
+        <div class="col-1"><img src="img/18764668.png" width="50px" height="50px" class="rounded-circle"></div>
+        <div class="col-1"><img src="img/18764668.png" width="50px" height="50px" class="rounded-circle"></div>
+        <div class="col-1"><img src="img/18764668.png" width="50px" height="50px" class="rounded-circle"></div>
+        <div class="col-1"><img src="img/18764668.png" width="50px" height="50px" class="rounded-circle"></div>
     </div>
 </div>
 </body>
