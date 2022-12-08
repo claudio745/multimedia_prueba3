@@ -44,7 +44,7 @@
                     <div class="col mt-2 d-flex justify-content-center">
                         <form action="ingresarCodigo.php" method="POST">
                             <label"><FONT COLOR="#FFFFFF"> Rut: </FONT></label>
-                            <input type="text" class="form-control" name="Rut" id="Rut" placeholder="11111111-1"/>
+                            <input type="text" class="form-control" name="Rut" maxlength="11" id="Rut" placeholder="12345678-k"/>
                             <br><br>
                             <label for="Contraseña"><FONT COLOR="#FFFFFF"> Contraseña: </FONT></label>
                             <input type="password" class="form-control" name="Contraseña" id="Contraseña">

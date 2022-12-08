@@ -29,52 +29,41 @@
                 <a class="navbar-brand" href="#"><FONT COLOR="#FFFFFF">INICIO</FONT></a>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" href="login.php"><FONT COLOR="#FFFFFF">Iniciar sesión</FONT></a>
+                        <a class="nav-link" href="adminEstadistica.php"><FONT COLOR="#FFFFFF">Estadisticas</FONT></a>
+                        <a class="nav-link" href="adminRegister.php"><FONT COLOR="#FFFFFF">Registrar personal</FONT></a>
+                        <a class="nav-link" href="index.php"><FONT COLOR="#FFFFFF">Cerrar sesión</FONT></a>
                     </div>
                 </div>
             </div>
         </nav>
     </div>
     <!--Fila Register-->
-    <div class="row" style="height: 1150px; background-color: #FFFFFF">
+    <div class="row" style="height: 600px; background-color: #FFFFFF">
         <div class="col mt-4 d-flex justify-content-center">
             <div class="Inicio">
-                <div class="row border rounded" style="height: 1100px; background-color: #BA181B">
-                    <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF">Registrarse </FONT></div>
+                <div class="row border rounded" style="height: 550px; background-color: #BA181B">
+                    <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF">Agregar noticia</FONT></div>
                     <div class="col mt-2 mb-2 d-flex justify-content-center">
-                        <form action="registrarCodigo.php" method="POST">
-                            <label"><FONT COLOR="#FFFFFF"> Nombres: </FONT></label>
-                            <input type="text" class="form-control" name="Nombres" id="Nombres"/>
+                        <form action="agregarNoticiaCodigo.php" method="POST">
+                            <label"><FONT COLOR="#FFFFFF"> Titulo: </FONT></label>
+                            <input type="text" class="form-control" name="Titulo" id="Titulo"/>
                             <br><br>
-                            <label"><FONT COLOR="#FFFFFF"> Apellido Paterno: </FONT></label>
-                            <input type="text" class="form-control" name="Apellido1" id="Apellido1"/>
+                            <label"><FONT COLOR="#FFFFFF"> Cuerpo: </FONT></label>
+                            <input type="text" class="form-control" name="Cuerpo" id="Cuerpo"/>
                             <br><br>
-                            <label"><FONT COLOR="#FFFFFF"> Apellido Materno: </FONT></label>
-                            <input type="text" class="form-control" name="Apellido2" id="Apellido2"/>
-                            <br><br>
-                            <label"><FONT COLOR="#FFFFFF"> Genero: </FONT></label>
-                            <select name="Genero" class="form-control" id="Genero">
-                                <option value="Masculino">Masculino</option>
-                                <option value="Femenino">Femenino</option>
-                                <option value="Otro">Otro</option>
+                            <label"><FONT COLOR="#FFFFFF"> Categoria: </FONT></label>
+                            <select name="Categoria" class="form-control" id="Categoria">
+                                <option value="Medicina">Medicina</option>
+                                <option value="Salud">Salud</option>
+                                <option value="Ambiental">Ambiental</option>
                             </select>                                <br><br>
-                            <label"><FONT COLOR="#FFFFFF"> Fecha de nacimiento: </FONT></label>
-                            <input type="date" class="form-control" name="Fecha" id="Fecha" min="1900-01-01" max="2016-01-01"> 
+                            <label><FONT COLOR="#FFFFFF"> Foto: </FONT></label>
+                            <FONT COLOR="#FFFFFF"><input type = "file" REQUIRED name = "Img"></FONT>
                             <br><br>
-                            <label"><FONT COLOR="#FFFFFF"> Ciudad de residencia: </FONT></label>
-                            <input type="text" class="form-control" name="Ciudad" id="Ciudad"/>
-                            <br><br>
-                            <label"><FONT COLOR="#FFFFFF"> Correo </FONT></label>
-                            <input type="email" class="form-control" name="Correo" id="Correo"/>
-                            <br><br>
-                            <label"><FONT COLOR="#FFFFFF"> Rut: </FONT></label>
-                            <input type="text" class="form-control" maxlength="11" name="Rut" id="Rut" placeholder="12345678-k"/>
-                            <br><br>
-                            <label for="Contraseña"><FONT COLOR="#FFFFFF"> Contraseña: </FONT></label>
-                            <input type="password" class="form-control" name="Contraseña" id="Contraseña">
-                            <br>
-                            <button type="submit" class="btn btn-secondary">Registrarse</button>
-                            <a href = "login.php"><button type="button" class="btn btn-secondary">Volver</button></a>
+                            <label"><FONT COLOR="#FFFFFF"> Autor: </FONT></label>
+                            <input type="text" class="form-control" name="Autor" id="Autor"/>
+                            <button type="submit" class="btn btn-secondary">Agregar</button>
+                            <a href = "adminIndex.php"><button type="button" class="btn btn-secondary">Volver</button></a>
                         </form>
                     </div>
                 </div>

@@ -15,11 +15,11 @@
     <?php 
         require_once('conexionCodigo.php');
         
-        //Grafico de torta
+        //Cantidad usuarios
         $consultaUsuarios = "SELECT count(rut) AS cantidad FROM usuario";
         $consultaUsuarios = $conexion->query($consultaUsuarios);
         $fila = mysqli_fetch_assoc($consultaUsuarios);
-
+        //Grafico de torta
         $consultaPersonal = "SELECT cargo, count(rut) AS cantidad FROM personal GROUP BY cargo";
         $consultaPersonal= mysqli_query($conexion, $consultaPersonal);
 
@@ -65,7 +65,7 @@
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Vida', 'Edad', { role: 'style' }],
+            ['Vida', 'Cantidad', { role: 'style' }],
             ['Joven', <?php echo $fila1['cantidad'] ?>, 'red'],            
             ['Adulto', <?php echo $fila2['cantidad'] ?>, 'blue'],            
             ['Adulto mayor', <?php echo $fila3['cantidad'] ?>, 'green'],
