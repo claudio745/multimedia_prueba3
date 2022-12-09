@@ -20,6 +20,10 @@
 
     ?>
 
+    <!--variable-->
+    <?php 
+    $nro = 0;
+    ?>
 
 </head>
 <body>
@@ -66,7 +70,7 @@
                 <button type="submit" class="btn btn-secondary">Eliminar noticia</button>
             </form>
         </div>
-        <div class="col-6 mt-2"><H3>Cantidad de noticias almacenadas: <?php echo $fila['cantidad'] ?></H3></div>
+        <div class="col-6 mt-2"><H3>Cantidad de noticias almacenadas: <?php echo $nro; echo $fila['cantidad'] ?></H3></div>
     </div>
     <!--Fila Noticias-->
     <div class="row" style="background-color: #FFFFFF">
@@ -81,7 +85,6 @@
                         ?>   
                         <table class="table table-bordered">
                             <?php
-                            $nro = 1;
                             //Seleciono todo de la tabla noticia
                             $sql="SELECT * FROM noticia WHERE id = $nro";
                             $result=mysqli_query($conexion, $sql);
@@ -111,8 +114,8 @@
                 <div class="col-11"></div>
                 <div class="col-1 mb-2">
                     <div class="btn-group me-2" role="group" aria-label="Second group">
-                        <button onclick="funcionRestar()" type="button" class="btn btn-secondary"><-</button>
-                        <button onclick="funcionSumar()" type="button" class="btn btn-secondary">-></button>
+                        <button type="button" class="btn btn-secondary"><-</button>
+                        <button type="button" class="btn btn-secondary">-></button>
                     </div>
                 </div>
             </div>
