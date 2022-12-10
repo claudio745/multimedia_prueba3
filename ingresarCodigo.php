@@ -16,6 +16,8 @@ else
   $fila = mysqli_fetch_assoc($resultado);
 
   if(password_verify($Contraseña, $fila['contraseña'])){
+    session_start();
+    $_SESSION['rut'] = $Rut;
     header("Location: http://127.0.0.1/multimedia_prueba3/usuarioIndex.php");
 
   }else{

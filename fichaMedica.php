@@ -1,5 +1,8 @@
 <?php
 
+session_start(); 
+$Rut = $_SESSION['rut'];
+
 require ('fpdf/fpdf.php');
 
 class PDF extends FPDF{
@@ -26,7 +29,7 @@ class PDF extends FPDF{
 require_once('conexionCodigo.php');
 
 //Consulta
-$consulta = "SELECT * FROM usuario WHERE rut = $Rut LIMIT 1";
+$consulta = "SELECT * FROM usuario WHERE rut = '$Rut' LIMIT 1";
 $consulta = $conexion->query($consulta);
 $fila = mysqli_fetch_assoc($consulta);
 
