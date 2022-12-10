@@ -16,6 +16,10 @@ else{
     $Rut=$_POST['Rut'];
     $Contraseña=$_POST['Contraseña'];
 
+    if (strlen($password) < 8) {
+        echo '<script>alert("Contraseña demasiado corta")</script>';
+    }
+
     $pass = password_hash($Contraseña, PASSWORD_DEFAULT);
     $query = "INSERT INTO usuario (nombres, apellido1, apellido2, genero, fechaNacim, ciudadResid, correo, rut, contraseña)
     VALUES ('$Nombres', '$Apellido1', '$Apellido2', '$Genero', '$Fecha', '$Ciudad', '$Correo', '$Rut', '$pass')";
