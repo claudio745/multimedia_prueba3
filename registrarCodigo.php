@@ -16,8 +16,8 @@ else{
     $Rut=$_POST['Rut'];
     $Contraseña=$_POST['Contraseña'];
 
-    if (strlen($password) < 8) {
-        echo '<script>alert("Contraseña demasiado corta")</script>';
+    if (strlen($Contraseña) < 8) {
+        echo '<script>alert("Contraseña demasiado corta e insegura")</script>';
     }
     else{
         $pass = password_hash($Contraseña, PASSWORD_DEFAULT);
