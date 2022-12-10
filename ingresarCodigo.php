@@ -30,7 +30,7 @@ else
         $logs->writeLine("Aviso", "Inicio sesion administrador, $Rut");
         $logs->close();
       }else{
-        header("Location: http://127.0.0.1/multimedia_prueba3/login.php");
+        header("Location: http://127.0.0.1/multimedia_prueba3/usuarioIndex.php");
       }
     }else{
       header("Location: http://127.0.0.1/multimedia_prueba3/login.php");
