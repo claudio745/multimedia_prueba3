@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" href="usuarioServicios.php"><FONT COLOR="#FFFFFF">Servicios</FONT></a>
-                        <a class="nav-link" href="index.php"><FONT COLOR="#FFFFFF">Cerrar sesión</FONT></a>
+                        <a class="nav-link" href="cerrarSession.php"><FONT COLOR="#FFFFFF">Cerrar sesión</FONT></a>
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                             <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
                                 <a href = "register.php"><button type="button" class="btn btn-outline-secondary">Solicitar hora</button></a>
                                 <a href = "register.php"><button type="button" class="btn btn-outline-secondary">Generar PDF</button></a>
-                                <a href = "register.php"><button type="button" class="btn btn-outline-secondary">Generar QR</button></a>
+                                <a href = "datosQR.php"><button type="button" class="btn btn-outline-secondary">Generar QR</button></a>
                             </div>
                         </form>
                     </div>

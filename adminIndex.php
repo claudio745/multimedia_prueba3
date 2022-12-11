@@ -70,7 +70,7 @@
                 <button type="submit" class="btn btn-secondary">Eliminar noticia</button>
             </form>
         </div>
-        <div class="col-6 mt-2"><H3>Cantidad de noticias almacenadas: <?php echo $nro; echo $fila['cantidad'] ?></H3></div>
+        <div class="col-6 mt-2"><H3>Cantidad de noticias almacenadas: <?php echo $fila['cantidad'] ?></H3></div>
     </div>
     <!--Fila Noticias-->
     <div class="row" style="background-color: #FFFFFF">

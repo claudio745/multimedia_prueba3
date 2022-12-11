@@ -16,6 +16,8 @@ else
   $fila = mysqli_fetch_assoc($resultado);
 
   if(password_verify($Contraseña, $fila['contraseña'])){
+    session_start();
+    $_SESSION['rut'] = $Rut;
     header("Location: http://127.0.0.1/multimedia_prueba3/usuarioIndex.php");
 
   }else{
@@ -30,7 +32,7 @@ else
         $logs->writeLine("Aviso", "Inicio sesion administrador, $Rut");
         $logs->close();
       }else{
-        header("Location: http://127.0.0.1/multimedia_prueba3/login.php");
+        header("Location: http://127.0.0.1/multimedia_prueba3/usuarioIndex.php");
       }
     }else{
       header("Location: http://127.0.0.1/multimedia_prueba3/login.php");
