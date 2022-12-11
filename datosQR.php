@@ -25,5 +25,5 @@ $marco = 3;
 $contenido = 'Rut: '.$fila['rut'].' '.'Nombre Completo: '.$fila['nombres'].' '.$fila['apellido1'].' '.$fila['apellido2'].' '.'Genero: '.$fila['genero'].' '.'Fecha de nacimiento: '.$fila['fechaNacim'].' '.'Ciudad de residencia: '.$fila['ciudadResid'];
 
 QRcode::png($contenido, $nombreArch, $nivel, $tamanio, $marco);
-header("Location: http://127.0.0.1/multimedia_prueba3/usuarioServicios.php");
+header("Location: http://127.0.0.1/multimedia_prueba3/usuarioQR.php");
 ?>

@@ -37,20 +37,15 @@
         </nav>
     </div>
     <!--Fila Servicios-->
-    <div class="row" style="height: 350px; background-color: #FFFFFF">
+    <div class="row" style="height: 400px; background-color: #FFFFFF">
         <div class="col mt-4 d-flex justify-content-center">
-            <div class="Servicios">
-                <div class="row border rounded" style="height: 300px; background-color: #BA181B">
-                    <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF"><H4>Servicios Disponibles</H4></FONT></div>
+            <div class="QR">
+                <div class="row border rounded" style="height: 350px; background-color: #BA181B">
+                    <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF"><H4>QR Usuario</H4></FONT></div>
                     <div class="col mt-2 d-flex justify-content-center">
-                        <form action="ingresarCodigo.php" method="POST">
-                            <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-                                <a href = "fichaRegister.php"><button type="button" class="btn btn-outline-secondary">Ingresar datos para ficha medica</button></a>
-                                <a href = "validarPDF.php"><button type="button" class="btn btn-outline-secondary">Generar PDF</button></a>
-                                <a href = "datosQR.php"><button type="button" class="btn btn-outline-secondary">Generar QR</button></a>
-                            </div>
-                        </form>
+                        <img width="250px" height="250px" src="QR/usuarioQR.png"/>
                     </div>
+                    <a href = "usuarioServicios.php"><button type="button" class="btn btn-secondary">Volver</button></a>  
                 </div>
             </div>
         </div>

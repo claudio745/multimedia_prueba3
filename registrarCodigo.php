@@ -18,13 +18,13 @@ else{
     $Rut=$_POST['Rut'];
     $Contraseña=$_POST['Contraseña'];
 
-    if (strlen($Contraseña) < 8) && (!preg_match("/[a-z]/", $Contraseña) && !preg_match("/[0-9]/", $Contraseña)) && (in_array($Contraseña, $contrasenas_no_seguras)) {
+    if ((strlen($Contraseña) < 8) && (!preg_match("/[a-z]/", $Contraseña) && !preg_match("/[0-9]/", $Contraseña)) && (in_array($Contraseña, $contrasenas_no_seguras))) {
         echo '<script>alert("Contraseña insegura, intente de nuevo")</script>';
         $logs = new log("logs.txt"); 
         $logs->writeLine("Aviso", " Ingreso de contraseña insegura en registro.");
         $logs->close();
     }
-    if{
+    if(empty($_POST['Rut'])){
             // separar el RUT en número y dígito verificador
             $partes = explode("-", $Rut);
             $numero = $partes[0];

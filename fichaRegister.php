@@ -17,7 +17,7 @@
     <!--Fila del Header-->
     <div class="row mt-2" style="background-color: #FFFFFF">
         <div class="col-6 mb-2"><img src="img/FrikiLuko.png" width="250px" height="140px"></div>
-        <div class="col-6 mb-2"><H1>HOSPITAL</H1></div>
+        <div class="col-6 mb-2"><h1>Hospital</h1></div>
     </div>
     <!--Fila del Main-->
     <div class="row" style="background-color: #BA181B">
@@ -36,19 +36,28 @@
             </div>
         </nav>
     </div>
-    <!--Fila Servicios-->
-    <div class="row" style="height: 350px; background-color: #FFFFFF">
+    <!--Fila Register-->
+    <div class="row" style="height: 650px; background-color: #FFFFFF">
         <div class="col mt-4 d-flex justify-content-center">
-            <div class="Servicios">
-                <div class="row border rounded" style="height: 300px; background-color: #BA181B">
-                    <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF"><H4>Servicios Disponibles</H4></FONT></div>
-                    <div class="col mt-2 d-flex justify-content-center">
-                        <form action="ingresarCodigo.php" method="POST">
-                            <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-                                <a href = "fichaRegister.php"><button type="button" class="btn btn-outline-secondary">Ingresar datos para ficha medica</button></a>
-                                <a href = "validarPDF.php"><button type="button" class="btn btn-outline-secondary">Generar PDF</button></a>
-                                <a href = "datosQR.php"><button type="button" class="btn btn-outline-secondary">Generar QR</button></a>
-                            </div>
+            <div class="Inicio">
+                <div class="row border rounded" style="height: 600px; background-color: #BA181B">
+                    <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF">Registrarse </FONT></div>
+                    <div class="col mt-2 mb-2 d-flex justify-content-center">
+                        <form action="fichaRegistrarCodigo.php" method="POST">
+                            <label"><FONT COLOR="#FFFFFF"> Antecedentes de enfermedad: </FONT></label>
+                            <input type="text" class="form-control" name="antEnfer" id="antEnfer"/>
+                            <br><br>
+                            <label"><FONT COLOR="#FFFFFF"> Alergias: </FONT></label>
+                            <input type="text" class="form-control" name="alergias" id="alergias"/>
+                            <br><br>
+                            <label"><FONT COLOR="#FFFFFF"> Enfermedades cronicas: </FONT></label>
+                            <input type="text" class="form-control" name="enferCroni" id="enferCroni"/>
+                            <br><br>
+                            <label"><FONT COLOR="#FFFFFF">Medicamento actual: </FONT></label>
+                            <input type="text" class="form-control" name="mediActu" id="mediActu"/>
+                            <br>
+                            <button type="submit" class="btn btn-secondary">Enviar</button>
+                            <a href = "usuarioServicios.php"><button type="button" class="btn btn-secondary">Volver</button></a>
                         </form>
                     </div>
                 </div>

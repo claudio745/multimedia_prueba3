@@ -22,21 +22,41 @@ class PDF extends FPDF{
 
     function Footer()
     {
+        $this->Ln(10);
+        $this->Cell(55, 0, 'Antecedentes de enfermedad: ', 0, 0, 'C', 0);
+        $this->Ln(10);
+        $this->Cell(20, 0, 'Alergias: ', 0, 0, 'C', 0);
+        $this->Ln(10);
+        $this->Cell(45, 0, 'Enfermedades Cronicas: ', 0, 0, 'C', 0);
+        $this->Ln(10);
+        $this->Cell(40, 0, 'Medicamento Actual: ', 0, 0, 'C', 0);
         $this->Image('C:\xampp\htdocs\multimedia_prueba3\img\logo.png',5,270,35);
     }
 }
 
 require_once('conexionCodigo.php');
 
-//Consulta
-$consulta = "SELECT * FROM usuario WHERE rut = '$Rut' LIMIT 1";
+//Consultas
+$consulta = "SELECT nombres, apellido1, apellido2, rut FROM usuario WHERE rut = '$Rut' LIMIT 1";
 $consulta = $conexion->query($consulta);
 $fila = mysqli_fetch_assoc($consulta);
+
+$consulta2 = "SELECT * FROM ficha WHERE rut = '$Rut' LIMIT 1";
+$consulta2 = $conexion->query($consulta2);
+$fila2 = mysqli_fetch_assoc($consulta2);
 
 $pdf = new PDF();
 $pdf->AddPage();
 $pdf->Cell(90,-22,$fila['nombres'].' '.$fila['apellido1'].' '.$fila['apellido2'],0,0,'C',0);
 $pdf->Ln(10);
 $pdf->Cell(45,-18,$fila['rut'],0,0,'C',0);
+$pdf->Ln(1);
+$pdf->Cell(0,25,$fila2['antEnfer'],0,0,'C',0);
+$pdf->Ln(1);
+$pdf->Cell(0,40,$fila2['alergias'],0,0,'C',0);
+$pdf->Ln(1);
+$pdf->Cell(0,60,$fila2['enferCroni'],0,0,'C',0);
+$pdf->Ln(1);
+$pdf->Cell(0,80,$fila2['mediActu'],0,0,'C',0);
 $pdf->OutPut('fichaMedica.PDF', 'I');
 ?>

@@ -4,7 +4,7 @@ require_once('conexionCodigo.php');
 
 $Eliminar=$_POST['Eliminar'];
 
-if($fila['id'] <> 0 || $fila['id'] == null){
+if($fila['id'] <> 0 || $fila['id'] <> null){
     $query = "DELETE FROM noticia WHERE id = $Eliminar";
     $resultado = $conexion->query($query);
 
