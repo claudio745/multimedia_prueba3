@@ -1,5 +1,5 @@
 <?php
-
+include 'log.php';
 require_once('conexionCodigo.php');
 
 $contrasenas_no_seguras = array("123456", "password", "123456789", "guest", "qwerty", "12345678", "11111", "12345", "col123456", "123123", "1234", "1234567890", "000000", "555555", "666666", "654321", "123321", "777777", "123");
@@ -20,9 +20,6 @@ else{
 
     if ((strlen($Contraseña) < 8) && (!preg_match("/[a-z]/", $Contraseña) && !preg_match("/[0-9]/", $Contraseña)) && (in_array($Contraseña, $contrasenas_no_seguras))) {
         echo '<script>alert("Contraseña insegura, intente de nuevo")</script>';
-        $logs = new log("logs.txt"); 
-        $logs->writeLine("Aviso", " Ingreso de contraseña insegura en registro.");
-        $logs->close();
     }
     /*if(empty($_POST['Rut'])){
             // separar el RUT en número y dígito verificador
@@ -49,10 +46,9 @@ else{
         $query = "INSERT INTO usuario (nombres, apellido1, apellido2, genero, fechaNacim, ciudadResid, correo, rut, contraseña)
         VALUES ('$Nombres', '$Apellido1', '$Apellido2', '$Genero', '$Fecha', '$Ciudad', '$Correo', '$Rut', '$pass')";
         $resultado = $conexion->query($query);
-
-        $archivo =fopen("log.txt","w");
-        fwrite($archivo, 'Registro exitoso: '.$Rut. PHP_EOL);
-        fclose($archivo);
+        $logs = new Log("log.txt"); 
+        $logs->writeLine("Aviso", " Registro Exitoso, $Rut");
+        $logs->close();
         
         header("Location: http://127.0.0.1/multimedia_prueba3/login.php");
     }
