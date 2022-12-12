@@ -68,7 +68,7 @@
                             <input type="email" class="form-control" name="Correo" id="Correo" required/>
                             <br><br>
                             <label"><FONT COLOR="#FFFFFF"> Rut: </FONT></label>
-                            <input type="text" class="form-control" maxlength="11" name="Rut" id="Rut" placeholder="12345678-k" pattern="[0-9]+[-][0-9-k]" required/>
+                            <input type="text" class="form-control" maxlength="11" name="Rut" id="Rut" placeholder="12345678-k" pattern="[0-9]+[-][1-9-k]" required/>
                             <br><br>
                             <label for="Contraseña"><FONT COLOR="#FFFFFF"> Contraseña: </FONT></label>
                             <input type="password" class="form-control" name="Contraseña" id="Contraseña" required>
