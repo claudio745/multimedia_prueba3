@@ -18,6 +18,9 @@ else
   if(password_verify($Contraseña, $fila['contraseña'])){
     session_start();
     $_SESSION['rut'] = $Rut;
+    $archivo =fopen("log.txt","a");
+    fwrite($archivo, 'Ingreso exitoso: '.$Rut."\n". PHP_EOL);
+    fclose($archivo);
     header("Location: http://127.0.0.1/multimedia_prueba3/usuarioIndex.php");
 
   }else{
@@ -27,9 +30,9 @@ else
 
     if(password_verify($Contraseña, $fila['contraseña'])){
       if($fila['cargo'] == 'Administrador' || $fila['cargo'] == 'Operador'){
-        $logs = new log("logs.txt"); 
-        $logs->writeLine("Aviso", "Inicio sesion administrador, $Rut");
-        $logs->close();
+        $archivo =fopen("log.txt","w");
+        fwrite($archivo, 'Ingreso exitoso: '.$Rut. PHP_EOL);
+        fclose($archivo);
         header("Location: http://127.0.0.1/multimedia_prueba3/adminIndex.php");
       }else{
         header("Location: http://127.0.0.1/multimedia_prueba3/usuarioIndex.php");
