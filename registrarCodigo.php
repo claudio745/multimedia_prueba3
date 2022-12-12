@@ -18,10 +18,10 @@ else{
     $Rut=$_POST['Rut'];
     $Contraseña=$_POST['Contraseña'];
 
-    if ((strlen($Contraseña) < 8) && (!preg_match("/[a-z]/", $Contraseña) && !preg_match("/[0-9]/", $Contraseña)) && (in_array($Contraseña, $contrasenas_no_seguras))) {
+    /*if ((strlen($Contraseña) < 8) && (!preg_match("/[a-z]/", $Contraseña) && !preg_match("/[0-9]/", $Contraseña)) && (in_array($Contraseña, $contrasenas_no_seguras))) {
         echo '<script>alert("Contraseña insegura, intente de nuevo")</script>';
     }
-    /*if(empty($_POST['Rut'])){
+     if(empty($_POST['Rut'])){
             // separar el RUT en número y dígito verificador
             $partes = explode("-", $Rut);
             $numero = $partes[0];
@@ -40,7 +40,7 @@ else{
             if ($digitoVerificador == $digito) {
               return true;
             }
-    }*/
+    } */
     else{
         $pass = password_hash($Contraseña, PASSWORD_DEFAULT);
         $query = "INSERT INTO usuario (nombres, apellido1, apellido2, genero, fechaNacim, ciudadResid, correo, rut, contraseña)
