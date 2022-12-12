@@ -24,7 +24,7 @@ else{
         $logs->writeLine("Aviso", " Ingreso de contraseña insegura en registro.");
         $logs->close();
     }
-    if(empty($_POST['Rut'])){
+    /*if(empty($_POST['Rut'])){
             // separar el RUT en número y dígito verificador
             $partes = explode("-", $Rut);
             $numero = $partes[0];
@@ -48,13 +48,13 @@ else{
                 $logs->writeLine("Aviso", " Ingreso de Rut Invalido en registro.");
                 $logs->close();
             }
-    }
+    }*/
     else{
         $pass = password_hash($Contraseña, PASSWORD_DEFAULT);
         $query = "INSERT INTO usuario (nombres, apellido1, apellido2, genero, fechaNacim, ciudadResid, correo, rut, contraseña)
         VALUES ('$Nombres', '$Apellido1', '$Apellido2', '$Genero', '$Fecha', '$Ciudad', '$Correo', '$Rut', '$pass')";
         $resultado = $conexion->query($query);
-        $logs = new log("logs.txt"); 
+        $logs = new Log("logs.txt"); 
         $logs->writeLine("Aviso", " Registro Exitoso, $Rut");
         $logs->close();
         
