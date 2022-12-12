@@ -101,7 +101,7 @@
                     <div class="navbar-nav">
                         <a class="nav-link" href="adminEstadistica.php"><FONT COLOR="#FFFFFF">Estadisticas</FONT></a>
                         <a class="nav-link" href="adminRegister.php"><FONT COLOR="#FFFFFF">Registrar personal</FONT></a>
-                        <a class="nav-link" href="index.php"><FONT COLOR="#FFFFFF">Cerrar sesión</FONT></a>
+                        <a class="nav-link" href="cerrarSession.php"><FONT COLOR="#FFFFFF">Cerrar sesión</FONT></a>
                     </div>
                 </div>
             </div>

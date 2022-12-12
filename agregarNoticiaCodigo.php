@@ -2,6 +2,9 @@
 include 'log.php';
 require_once('conexionCodigo.php');
 
+session_start(); 
+$Rut = $_SESSION['rut'];
+
 if (empty($_POST['Titulo']) || empty($_POST['Cuerpo']) || empty($_POST['Img']) || empty($_POST['Autor'])){
     header("Location: http://127.0.0.1/multimedia_prueba3/agregarNoticia.php");
     

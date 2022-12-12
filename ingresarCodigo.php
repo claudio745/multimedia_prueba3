@@ -30,6 +30,8 @@ else
 
     if(password_verify($Contraseña, $fila['contraseña'])){
       if($fila['cargo'] == 'Administrador' || $fila['cargo'] == 'Operador'){
+        session_start();
+        $_SESSION['rut'] = $Rut;
         $logs = new Log("log.txt"); 
         $logs->writeLine("Aviso", "Inicio sesion administrador, $Rut");
         $logs->close();

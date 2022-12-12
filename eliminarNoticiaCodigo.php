@@ -2,6 +2,9 @@
 include 'log.php';
 require_once('conexionCodigo.php');
 
+session_start(); 
+$Rut = $_SESSION['rut'];
+
 $Eliminar=$_POST['Eliminar'];
 
 if($fila['id'] <> 0 || $fila['id'] <> null){
