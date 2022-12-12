@@ -17,6 +17,10 @@ else{
     $query = "INSERT INTO personal (nombres, apellido1, apellido2, cargo, rut, contraseña)
     VALUES ('$Nombres', '$Apellido1', '$Apellido2', '$Cargo', '$Rut', '$pass')";
     $resultado = $conexion->query($query);
+    $resultado = $conexion->query($query);
+    $logs = new Log("log.txt"); 
+    $logs->writeLine("Aviso", " Registro Exitoso, $Rut");
+    $logs->close();
     
     header("Location: http://127.0.0.1/multimedia_prueba3/adminEstadistica.php");
 }
