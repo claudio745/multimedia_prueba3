@@ -1,8 +1,15 @@
 <?php
 require_once('conexionCodigo.php');
 
+$consulta = "SELECT count(rut) AS existe FROM usuario WHERE rut = '$Rut' LIMIT 1";
+$consulta = $conexion->query($consulta);
+$fila = mysqli_fetch_assoc($consulta);
+
 if (empty($_POST['Nombres']) || empty($_POST['Apellido1']) || empty($_POST['Apellido2']) || empty($_POST['Ciudad']) || empty($_POST['Correo']) || empty($_POST['Rut']) || empty($_POST['Contraseña'])){
     header("Location: http://127.0.0.1/multimedia_prueba3/register.php");
+}
+else if($fila['existe'] = 1){
+  header("Location: http://127.0.0.1/multimedia_prueba3/register.php");
 }
 else{
   $Nombres=$_POST['Nombres'];
