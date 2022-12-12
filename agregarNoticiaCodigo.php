@@ -1,9 +1,10 @@
 <?php
-
+include 'log.php';
 require_once('conexionCodigo.php');
 
 if (empty($_POST['Titulo']) || empty($_POST['Cuerpo']) || empty($_POST['Img']) || empty($_POST['Autor'])){
     header("Location: http://127.0.0.1/multimedia_prueba3/agregarNoticia.php");
+    
 }
 else{
     $Titulo=$_POST['Titulo'];
@@ -15,6 +16,10 @@ else{
     $query = "INSERT INTO noticia (titulo, cuerpo, categoria, img, autor)
     VALUES ('$Titulo', '$Cuerpo', '$Categoria', '$Img', '$Autor')";
     $resultado = $conexion->query($query);
+    $logs = new Log("log.txt"); 
+    $logs->writeLine("Aviso", " Agregó Noticia: , $Rut");
+    $logs->close();
+    
     
      header("Location: http://127.0.0.1/multimedia_prueba3/adminIndex.php");
 }
