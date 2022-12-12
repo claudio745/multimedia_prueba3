@@ -49,17 +49,11 @@ else{
         $query = "INSERT INTO usuario (nombres, apellido1, apellido2, genero, fechaNacim, ciudadResid, correo, rut, contraseña)
         VALUES ('$Nombres', '$Apellido1', '$Apellido2', '$Genero', '$Fecha', '$Ciudad', '$Correo', '$Rut', '$pass')";
         $resultado = $conexion->query($query);
-<<<<<<< HEAD
 
         $archivo =fopen("log.txt","w");
         fwrite($archivo, 'Registro exitoso: '.$Rut. PHP_EOL);
         fclose($archivo);
-=======
-        $logs = new Log("logs.txt"); 
-        $logs->writeLine("Aviso", " Registro Exitoso, $Rut");
-        $logs->close();
->>>>>>> 800326b3c1dbab9e2880ee39d9e20f39189f41e6
         
-         header("Location: http://127.0.0.1/multimedia_prueba3/login.php");
+        header("Location: http://127.0.0.1/multimedia_prueba3/login.php");
     }
 }
