@@ -1,5 +1,5 @@
 <?php
-
+include 'log.php';
 require_once('conexionCodigo.php');
 
 if (empty($_POST['Rut']) || empty($_POST['Contraseña']))
@@ -30,9 +30,9 @@ else
 
     if(password_verify($Contraseña, $fila['contraseña'])){
       if($fila['cargo'] == 'Administrador' || $fila['cargo'] == 'Operador'){
-        $archivo =fopen("log.txt","w");
-        fwrite($archivo, 'Ingreso exitoso: '.$Rut. PHP_EOL);
-        fclose($archivo);
+        $logs = new Log("log.txt"); 
+        $logs->writeLine("Aviso", "Inicio sesion administrador, $Rut");
+        $logs->close();
         header("Location: http://127.0.0.1/multimedia_prueba3/adminIndex.php");
       }else{
         header("Location: http://127.0.0.1/multimedia_prueba3/usuarioIndex.php");
