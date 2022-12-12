@@ -31,10 +31,6 @@ else
         $logs->writeLine("Aviso", "Inicio sesion administrador, $Rut");
         $logs->close();
         header("Location: http://127.0.0.1/multimedia_prueba3/adminIndex.php");
-<<<<<<< HEAD
-=======
-        
->>>>>>> 800326b3c1dbab9e2880ee39d9e20f39189f41e6
       }else{
         header("Location: http://127.0.0.1/multimedia_prueba3/usuarioIndex.php");
       }
