@@ -42,11 +42,6 @@ else{
             // comparar el dígito verificador calculado con el dígito verificador del RUT
             if ($digitoVerificador == $digito) {
               return true;
-            } else {
-                echo '<script>alert("Rut Invalido, intente de nuevo")</script>';
-                $logs = new log("logs.txt"); 
-                $logs->writeLine("Aviso", " Ingreso de Rut Invalido en registro.");
-                $logs->close();
             }
     }
     else{
@@ -54,9 +49,10 @@ else{
         $query = "INSERT INTO usuario (nombres, apellido1, apellido2, genero, fechaNacim, ciudadResid, correo, rut, contraseña)
         VALUES ('$Nombres', '$Apellido1', '$Apellido2', '$Genero', '$Fecha', '$Ciudad', '$Correo', '$Rut', '$pass')";
         $resultado = $conexion->query($query);
-        $logs = new log("logs.txt"); 
-        $logs->writeLine("Aviso", " Registro Exitoso, $Rut");
-        $logs->close();
+
+        $archivo =fopen("log.txt","w");
+        fwrite($archivo, 'Registro exitoso: '.$Rut. PHP_EOL);
+        fclose($archivo);
         
          header("Location: http://127.0.0.1/multimedia_prueba3/login.php");
     }

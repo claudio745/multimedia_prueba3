@@ -85,7 +85,7 @@
     <div class="row mt-2" style="background-color: #BA181B">
         <div class="col mb-2"><img src="img/Logo White.png" width="250px" height="140px"></div>
         <div class="col-1"><img src="img/18764668.png" width="50px" height="50px" class="rounded-circle"></div>
-        <div class="col-1"><img src="img/18764668.png" width="50px" height="50px" class="rounded-circle"></div>
+        <div class="col-1"><img src="img/contacto2.png" width="50px" height="50px" class="rounded-circle"></div>
         <div class="col-1"><img src="img/18764668.png" width="50px" height="50px" class="rounded-circle"></div>
         <div class="col-1"><img src="img/18764668.png" width="50px" height="50px" class="rounded-circle"></div>
     </div>
