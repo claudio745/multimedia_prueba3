@@ -20,11 +20,6 @@
 
     ?>
 
-    <!--variable-->
-    <?php 
-    $nro = 0;
-    ?>
-
 </head>
 <body>
 <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -74,9 +69,9 @@
     </div>
     <!--Fila Noticias-->
     <div class="row" style="background-color: #FFFFFF">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-12" style="height:300px">
+                <div class="col-12">
                     <div class="col">
                     <?php
                         //Conexion con bd
@@ -86,7 +81,7 @@
                         <table class="table table-bordered">
                             <?php
                             //Seleciono todo de la tabla noticia
-                            $sql="SELECT * FROM noticia WHERE id = $nro";
+                            $sql="SELECT * FROM noticia";
                             $result=mysqli_query($conexion, $sql);
 
                             //ordeno imprimir
@@ -104,6 +99,7 @@
                                     <h6><?php echo $mostrar['categoria']?></h6>
                                     <h6><?php echo $mostrar['autor']?></h6>
                                 </div>
+                                <hr>
                             </div>
                             <?php
                             }
@@ -112,12 +108,6 @@
                     </div>
                 </div>
                 <div class="col-11"></div>
-                <div class="col-1 mb-2">
-                    <div class="btn-group me-2" role="group" aria-label="Second group">
-                        <button type="button" class="btn btn-secondary"><-</button>
-                        <button type="button" class="btn btn-secondary">-></button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

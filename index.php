@@ -8,6 +8,18 @@
 
      <!-- Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--Consultas-->
+    <?php 
+        require_once('conexionCodigo.php');
+        
+        //Cantidad de noticias
+        $consultaNoticias = "SELECT count(id) AS cantidad FROM noticia";
+        $consultaNoticias = $conexion->query($consultaNoticias);
+        $fila = mysqli_fetch_assoc($consultaNoticias);
+
+    ?>
+
 </head>
 <body>
 <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -80,9 +92,9 @@
     </div>
     <!--Fila Noticias-->
     <div class="row" style="background-color: #FFFFFF">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-12" style="height:300px">
+                <div class="col-12">
                     <div class="col">
                     <?php
                         //Conexion con bd
@@ -91,9 +103,8 @@
                         ?>   
                         <table class="table table-bordered">
                             <?php
-                            $nro = 1;
                             //Seleciono todo de la tabla noticia
-                            $sql="SELECT * FROM noticia WHERE id = $nro";
+                            $sql="SELECT * FROM noticia";
                             $result=mysqli_query($conexion, $sql);
 
                             //ordeno imprimir
@@ -105,11 +116,13 @@
                                     <img width="250px" height="250px" src="data:foto/jpg;base64,<?php echo base64_encode($mostrar['img']);?>"/>
                                 </div>
                                 <div class="col-10 mt-4">
+                                    <h1><?php echo $mostrar['id']?></h1>
                                     <h2><?php echo $mostrar['titulo']?></h2>
                                     <h5><?php echo $mostrar['cuerpo']?></h5>
                                     <h6><?php echo $mostrar['categoria']?></h6>
                                     <h6><?php echo $mostrar['autor']?></h6>
                                 </div>
+                                <hr>
                             </div>
                             <?php
                             }
@@ -118,12 +131,6 @@
                     </div>
                 </div>
                 <div class="col-11"></div>
-                <div class="col-1 mb-2">
-                    <div class="btn-group me-2" role="group" aria-label="Second group">
-                        <button onclick="funcionRestar()" type="button" class="btn btn-secondary"><-</button>
-                        <button onclick="funcionSumar()" type="button" class="btn btn-secondary">-></button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
