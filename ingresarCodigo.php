@@ -16,11 +16,6 @@ else
   $fila = mysqli_fetch_assoc($resultado);
 
   if(password_verify($Contraseña, $fila['contraseña'])){
-    session_start();
-    $_SESSION['rut'] = $Rut;
-    $archivo =fopen("log.txt","a");
-    fwrite($archivo, 'Ingreso exitoso: '.$Rut."\n". PHP_EOL);
-    fclose($archivo);
     header("Location: http://127.0.0.1/multimedia_prueba3/usuarioIndex.php");
 
   }else{
@@ -37,6 +32,11 @@ else
         $logs->close();
         header("Location: http://127.0.0.1/multimedia_prueba3/adminIndex.php");
       }else{
+        session_start();
+        $_SESSION['rut'] = $Rut;
+        $archivo =fopen("log.txt","a");
+        fwrite($archivo, 'Ingreso exitoso: '.$Rut."\n". PHP_EOL);
+        fclose($archivo);
         header("Location: http://127.0.0.1/multimedia_prueba3/usuarioIndex.php");
       }
     }else{
