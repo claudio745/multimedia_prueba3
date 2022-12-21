@@ -11,7 +11,7 @@ if($Eliminar > 0 || $Eliminar != null){
     $query = "DELETE FROM noticia WHERE id = $Eliminar";
     $resultado = $conexion->query($query);
     $logs = new Log("log.txt"); 
-    $logs->writeLine("Aviso", " Eliminó Noticia: , $Rut");
+    $logs->writeLine("Aviso", " $Rut eliminó Noticia: $Eliminar");
     $logs->close();
 
     header("Location: http://127.0.0.1/multimedia_prueba3/adminIndex.php");

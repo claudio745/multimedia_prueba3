@@ -17,7 +17,7 @@
     <!--Fila del Header-->
     <div class="row mt-2" style="background-color: #FFFFFF">
         <div class="col-6 mb-2"><img src="img/FrikiLuko.png" width="250px" height="140px"></div>
-        <div class="col-6 mb-2"><H1>HOSPITAL</H1></div>
+        <div class="col-6 mb-2"><h1>Hospital</h1></div>
     </div>
     <!--Fila del Main-->
     <div class="row" style="background-color: #BA181B">
@@ -26,30 +26,30 @@
                 <a class="navbar-brand" href="#">
                     <img src="img/LogorecortedWhite.png" alt="" width="50" height="35">
                 </a>
-                <a class="navbar-brand" href="usuarioIndex.php"><FONT COLOR="#FFFFFF">INICIO</FONT></a>
+                <a class="navbar-brand" href="adminIndex.php"><FONT COLOR="#FFFFFF">INICIO</FONT></a>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" href="usuarioServicios.php"><FONT COLOR="#FFFFFF">Servicios</FONT></a>
-                        <a class="nav-link" href="verPerfil.php"><FONT COLOR="#FFFFFF">Ver perfil</FONT></a>
+                        <a class="nav-link" href="adminEstadistica.php"><FONT COLOR="#FFFFFF">Estadisticas</FONT></a>
+                        <a class="nav-link" href="adminRegister.php"><FONT COLOR="#FFFFFF">Registrar personal</FONT></a>
+                        <a class="nav-link" href="adminEliminarPersonal.php"><FONT COLOR="#FFFFFF">Eliminar personal</FONT></a>
                         <a class="nav-link" href="cerrarSession.php"><FONT COLOR="#FFFFFF">Cerrar sesión</FONT></a>
                     </div>
                 </div>
             </div>
         </nav>
     </div>
-    <!--Fila Servicios-->
-    <div class="row" style="height: 350px; background-color: #FFFFFF">
+    <!--Fila Register-->
+    <div class="row" style="height: 750px; background-color: #FFFFFF">
         <div class="col mt-4 d-flex justify-content-center">
-            <div class="Servicios">
-                <div class="row border rounded" style="height: 300px; background-color: #BA181B">
-                    <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF"><H4>Servicios Disponibles</H4></FONT></div>
-                    <div class="col mt-2 d-flex justify-content-center">
-                        <form action="ingresarCodigo.php" method="POST">
-                            <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-                                <a href = "fichaRegister.php"><button type="button" class="btn btn-outline-secondary">Ingresar datos para ficha medica</button></a>
-                                <a href = "validarPDF.php"><button type="button" class="btn btn-outline-secondary">Generar PDF</button></a>
-                                <a href = "datosQR.php"><button type="button" class="btn btn-outline-secondary">Generar QR</button></a>
-                            </div>
+            <div class="Inicio">
+                <div class="row border rounded" style="height: 200px; background-color: #BA181B">
+                    <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF">Registrarse </FONT></div>
+                    <div class="col mt-2 mb-2 d-flex justify-content-center">
+                        <form action="adminEliminarPersonalCodigo.php" method="POST">
+                            <label"><FONT COLOR="#FFFFFF"> Rut: </FONT></label>
+                            <input type="text" class="form-control" name="Rut" id="Rut" placeholder="11111111-1"/>
+                            <button type="submit" class="btn btn-secondary">Eliminar</button>
+                            <a href = "adminIndex.php"><button type="button" class="btn btn-secondary">Volver</button></a>    
                         </form>
                     </div>
                 </div>

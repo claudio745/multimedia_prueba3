@@ -14,14 +14,6 @@
     <!--Consultas-->
     <?php 
         require_once('conexionCodigo.php');
-        
-        //Cantidad usuarios
-        $consultaUsuarios = "SELECT count(rut) AS cantidad FROM usuario";
-        $consultaUsuarios = $conexion->query($consultaUsuarios);
-        $fila = mysqli_fetch_assoc($consultaUsuarios);
-        //Grafico de torta
-        $consultaPersonal = "SELECT cargo, count(rut) AS cantidad FROM personal GROUP BY cargo";
-        $consultaPersonal= mysqli_query($conexion, $consultaPersonal);
 
         //Grafico de barras
         $jovenUsuarios = "SELECT count(rut) AS cantidad FROM usuario WHERE fechaNacim > '01/01/2005'";
@@ -34,30 +26,6 @@
         $adultoMayorUsuarios = $conexion->query($adultoMayorUsuarios);
         $fila3 = mysqli_fetch_assoc($adultoMayorUsuarios);
     ?>
-    
-    <!--Grafico de Torta-->
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-            ['cargo', 'cantidad'],
-            <?php
-                while ($row = mysqli_fetch_array($consultaPersonal)) {
-                    echo "['" . $row["cargo"] . "', " . $row["cantidad"] . "],";
-                }
-            ?>
-        ]);
-
-        var options = {
-          title: 'Cantidades de roles otorgados'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-        chart.draw(data, options);
-        }
-    </script>
 
     <!--Grafico de Tabla-->
     <script type="text/javascript">
@@ -96,12 +64,10 @@
                 <a class="navbar-brand" href="#">
                     <img src="img/LogorecortedWhite.png" alt="" width="50" height="35">
                 </a>
-                <a class="navbar-brand" href="adminIndex.php"><FONT COLOR="#FFFFFF">INICIO</FONT></a>
+                <a class="navbar-brand" href="medicoIndex.php"><FONT COLOR="#FFFFFF">INICIO</FONT></a>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" href="adminEstadistica.php"><FONT COLOR="#FFFFFF">Estadisticas</FONT></a>
-                        <a class="nav-link" href="adminRegister.php"><FONT COLOR="#FFFFFF">Registrar personal</FONT></a>
-                        <a class="nav-link" href="adminEliminarPersonal.php"><FONT COLOR="#FFFFFF">Eliminar personal</FONT></a>
+                        <a class="nav-link" href="medicoServicios.php"><FONT COLOR="#FFFFFF">Servicios</FONT></a>
                         <a class="nav-link" href="cerrarSession.php"><FONT COLOR="#FFFFFF">Cerrar sesión</FONT></a>
                     </div>
                 </div>
@@ -110,7 +76,6 @@
     </div>
     <!--Fila de los Graficos-->
     <div class="row" style="height: 400px; background-color: #FFFFFF">
-        <div class="col-12">Cantidad de Usuarios registrados: <?php echo $fila['cantidad'] ?></div>
         <div class="col-8 d-flex justify-content-center" style="height: 300px; background-color: #FFFFFF">
             <div id="chart_div"></div>
         </div>

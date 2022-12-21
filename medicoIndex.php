@@ -41,8 +41,7 @@
                 <a class="navbar-brand" href="#"><FONT COLOR="#FFFFFF">INICIO</FONT></a>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" href="usuarioServicios.php"><FONT COLOR="#FFFFFF">Servicios</FONT></a>
-                        <a class="nav-link" href="verPerfil.php"><FONT COLOR="#FFFFFF">Ver perfil</FONT></a>
+                        <a class="nav-link" href="medicoServicios.php"><FONT COLOR="#FFFFFF">Servicios</FONT></a>
                         <a class="nav-link" href="cerrarSession.php"><FONT COLOR="#FFFFFF">Cerrar sesión</FONT></a>
                     </div>
                 </div>

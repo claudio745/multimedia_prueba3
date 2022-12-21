@@ -17,7 +17,7 @@
     <!--Fila del Header-->
     <div class="row mt-2" style="background-color: #FFFFFF">
         <div class="col-6 mb-2"><img src="img/FrikiLuko.png" width="250px" height="140px"></div>
-        <div class="col-6 mb-2"><H1>HOSPITAL</H1></div>
+        <div class="col-6 mb-2"><h1>Hospital</h1></div>
     </div>
     <!--Fila del Main-->
     <div class="row" style="background-color: #BA181B">
@@ -26,7 +26,7 @@
                 <a class="navbar-brand" href="#">
                     <img src="img/LogorecortedWhite.png" alt="" width="50" height="35">
                 </a>
-                <a class="navbar-brand" href="usuarioIndex.php"><FONT COLOR="#FFFFFF">INICIO</FONT></a>
+                <a class="navbar-brand" href="index.php"><FONT COLOR="#FFFFFF">INICIO</FONT></a>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" href="usuarioServicios.php"><FONT COLOR="#FFFFFF">Servicios</FONT></a>
@@ -37,22 +37,51 @@
             </div>
         </nav>
     </div>
-    <!--Fila Servicios-->
-    <div class="row" style="height: 350px; background-color: #FFFFFF">
-        <div class="col mt-4 d-flex justify-content-center">
-            <div class="Servicios">
-                <div class="row border rounded" style="height: 300px; background-color: #BA181B">
-                    <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF"><H4>Servicios Disponibles</H4></FONT></div>
-                    <div class="col mt-2 d-flex justify-content-center">
-                        <form action="ingresarCodigo.php" method="POST">
-                            <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-                                <a href = "fichaRegister.php"><button type="button" class="btn btn-outline-secondary">Ingresar datos para ficha medica</button></a>
-                                <a href = "validarPDF.php"><button type="button" class="btn btn-outline-secondary">Generar PDF</button></a>
-                                <a href = "datosQR.php"><button type="button" class="btn btn-outline-secondary">Generar QR</button></a>
+    <!--Fila Noticias-->
+    <div class="row" style="background-color: #FFFFFF">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="col">
+                    <?php
+                        //Conexion con bd
+                        require_once('conexionCodigo.php');
+                    
+                        ?>   
+                        <table class="table table-bordered">
+                            <?php
+
+                            require_once('conexionCodigo.php');
+
+                            session_start(); 
+                            $Rut = $_SESSION['rut'];
+
+                            //Seleciono todo de la tabla noticia
+                            $sql="SELECT * FROM usuario WHERE rut = '$Rut'";
+                            $result=mysqli_query($conexion, $sql);
+
+                            //ordeno imprimir
+                            while($mostrar=mysqli_fetch_array($result)){
+                            ?>
+
+                            <div class="row">
+                                <div class="col-10 mt-4">
+                                    <h1><?php echo $mostrar['nombres']?></h1>
+                                    <h2><?php echo $mostrar['apellido1']?></h2>
+                                    <h5><?php echo $mostrar['apellido2']?></h5>
+                                    <h6><?php echo $mostrar['genero']?></h6>
+                                    <h6><?php echo $mostrar['fechaNacim']?></h6>
+                                    <h6><?php echo $mostrar['ciudadResid']?></h6>
+                                    <h6><?php echo $mostrar['correo']?></h6>
+                                </div>
                             </div>
-                        </form>
+                            <?php
+                            }
+                            ?>
+                        </table>
                     </div>
                 </div>
+                <div class="col-11"></div>
             </div>
         </div>
     </div>

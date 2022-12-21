@@ -43,6 +43,7 @@
                     <div class="navbar-nav">
                         <a class="nav-link" href="adminEstadistica.php"><FONT COLOR="#FFFFFF">Estadisticas</FONT></a>
                         <a class="nav-link" href="adminRegister.php"><FONT COLOR="#FFFFFF">Registrar personal</FONT></a>
+                        <a class="nav-link" href="adminEliminarPersonal.php"><FONT COLOR="#FFFFFF">Eliminar personal</FONT></a>
                         <a class="nav-link" href="cerrarSession.php"><FONT COLOR="#FFFFFF">Cerrar sesión</FONT></a>
                     </div>
                 </div>
@@ -54,6 +55,9 @@
         <div class="col-2 mt-2"> 
                 <a href = "agregarNoticia.php">
                     <button type="button" class="btn btn-secondary">Agregar noticia</button>
+                </a>
+                <a href = "modificarNoticia.php">
+                    <button type="button" class="btn btn-secondary">Modificar noticia</button>
                 </a>
         </div>
 

@@ -36,10 +36,10 @@
         </nav>
     </div>
     <!--Fila Login-->
-    <div class="row" style="height: 350px; background-color: #FFFFFF">
+    <div class="row" style="height: 600px; background-color: #FFFFFF">
         <div class="col mt-4 d-flex justify-content-center">
             <div class="Inicio">
-                <div class="row border rounded" style="height: 300px; background-color: #BA181B">
+                <div class="row border rounded" style="height: 350px; background-color: #BA181B">
                     <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF">Inicio sesión </FONT></div>
                     <div class="col mt-2 d-flex justify-content-center">
                         <form action="ingresarCodigo.php" method="POST">

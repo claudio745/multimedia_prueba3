@@ -39,13 +39,16 @@
         </nav>
     </div>
     <!--Fila Register-->
-    <div class="row" style="height: 600px; background-color: #FFFFFF">
+    <div class="row" style="height: 700px; background-color: #FFFFFF">
         <div class="col mt-4 d-flex justify-content-center">
             <div class="Inicio">
-                <div class="row border rounded" style="height: 550px; background-color: #BA181B">
-                    <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF">Agregar noticia</FONT></div>
+                <div class="row border rounded" style="height: 650px; background-color: #BA181B">
+                    <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF">Modificar noticia</FONT></div>
                     <div class="col mt-2 mb-2 d-flex justify-content-center">
-                        <form action="agregarNoticiaCodigo.php" method="POST">
+                        <form action="modificarNoticiaCodigo.php" method="POST">
+                            <label"><FONT COLOR="#FFFFFF"> ID de la noticia: </FONT></label>
+                            <input type="text" class="form-control" name="id" id="id"/>
+                            <br><br>
                             <label"><FONT COLOR="#FFFFFF"> Titulo: </FONT></label>
                             <input type="text" class="form-control" name="Titulo" id="Titulo"/>
                             <br><br>

@@ -40,9 +40,6 @@ else{
 
         $query = "DELETE FROM noticia WHERE id = $Minimo";
         $resultado = $conexion->query($query);
-        $logs = new Log("log.txt"); 
-        $logs->writeLine("Aviso", " Eliminó Noticia: , $Rut");
-        $logs->close();
 
         $Titulo=$_POST['Titulo'];
         $Cuerpo=$_POST['Cuerpo'];
@@ -54,7 +51,7 @@ else{
         VALUES ('$Titulo', '$Cuerpo', '$Categoria', '$Img', '$Autor')";
         $resultado = $conexion->query($query);
         $logs = new Log("log.txt"); 
-        $logs->writeLine("Aviso", " Agregó Noticia: , $Rut");
+        $logs->writeLine("Aviso", "$Rut Agregó Noticia y Se eliminó Noticia: $Minimo");
         $logs->close();
         
         header("Location: http://127.0.0.1/multimedia_prueba3/adminIndex.php");

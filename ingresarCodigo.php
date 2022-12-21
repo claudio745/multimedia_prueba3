@@ -16,6 +16,9 @@ else
   $fila = mysqli_fetch_assoc($resultado);
 
   if(password_verify($Contraseña, $fila['contraseña'])){
+    session_start();
+    $_SESSION['rut'] = $Rut;
+    
     header("Location: http://127.0.0.1/multimedia_prueba3/usuarioIndex.php");
 
   }else{
@@ -28,16 +31,16 @@ else
         session_start();
         $_SESSION['rut'] = $Rut;
         $logs = new Log("log.txt"); 
-        $logs->writeLine("Aviso", "Inicio sesion administrador, $Rut");
+        $logs->writeLine("Aviso", 'Inicio sesion '.$fila['cargo']." con el rut: $Rut");
         $logs->close();
         header("Location: http://127.0.0.1/multimedia_prueba3/adminIndex.php");
       }else{
         session_start();
         $_SESSION['rut'] = $Rut;
-        $archivo =fopen("log.txt","a");
-        fwrite($archivo, 'Ingreso exitoso: '.$Rut."\n". PHP_EOL);
-        fclose($archivo);
-        header("Location: http://127.0.0.1/multimedia_prueba3/usuarioIndex.php");
+        $logs = new Log("log.txt"); 
+        $logs->writeLine("Aviso", 'Inicio sesion '.$fila['cargo']." con el rut: $Rut");
+        $logs->close();
+        header("Location: http://127.0.0.1/multimedia_prueba3/medicoIndex.php");
       }
     }else{
       header("Location: http://127.0.0.1/multimedia_prueba3/login.php");
