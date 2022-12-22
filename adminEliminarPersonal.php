@@ -43,7 +43,7 @@
         <div class="col mt-4 d-flex justify-content-center">
             <div class="Inicio">
                 <div class="row border rounded" style="height: 200px; background-color: #BA181B">
-                    <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF">Registrarse </FONT></div>
+                    <div class="col-12 mt-2 d-flex justify-content-center"><FONT COLOR="#FFFFFF"> Eliminar Personal </FONT></div>
                     <div class="col mt-2 mb-2 d-flex justify-content-center">
                         <form action="adminEliminarPersonalCodigo.php" method="POST">
                             <label"><FONT COLOR="#FFFFFF"> Rut: </FONT></label>

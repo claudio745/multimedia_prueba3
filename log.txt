@@ -1,0 +1,6 @@
+[Aviso][21-12-2022 23:59:44]:Inicio sesion Administrador con el rut: 20955812-2
+[Aviso][22-12-2022 02:19:55]:Inicio sesion Administrador con el rut: 20955812-2
+[Aviso][22-12-2022 02:27:18]:Inicio sesion Administrador con el rut: 20955812-2
+[Aviso][22-12-2022 02:27:32]:20955812-2 Registro a: 20955812-4 con cargo de Medico
+[Aviso][22-12-2022 02:27:43]:Inicio sesion Medico con el rut: 20955812-4
+[Aviso][22-12-2022 02:29:01]:Inicio sesion Medico con el rut: 20955812-4
