@@ -59,21 +59,21 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img src="img/a.jpg" class="d-block w-100" height="300px">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5></h5>
-                        <p></p>
-                    </div>
-                    </div>
-                    <div class="carousel-item">
-                    <img src="img/images.jfif" class="d-block w-100" height="300px">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5></h5>
-                        <p></p>
-                    </div>
-                    </div>
-                    <div class="carousel-item">
                     <img src="img/b.jpg" class="d-block w-100" height="300px">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img src="img/doctors.jpg" class="d-block w-100" height="300px">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img src="img/a.jpg" class="d-block w-100" height="300px">
                     <div class="carousel-caption d-none d-md-block">
                         <h5></h5>
                         <p></p>

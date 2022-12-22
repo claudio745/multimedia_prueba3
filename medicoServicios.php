@@ -16,13 +16,13 @@
         require_once('conexionCodigo.php');
 
         //Grafico de barras
-        $jovenUsuarios = "SELECT count(rut) AS cantidad FROM usuario WHERE fechaNacim > '01/01/2005'";
+        $jovenUsuarios = "SELECT count(rut) AS cantidad FROM usuario WHERE fechaNacim >= '2005/01/01'";
         $jovenUsuarios = $conexion->query($jovenUsuarios);
         $fila1 = mysqli_fetch_assoc($jovenUsuarios);
-        $adultoUsuarios = "SELECT count(rut) AS cantidad FROM usuario WHERE fechaNacim < '01/01/2005' AND fechaNacim > '01/01/1961'";
+        $adultoUsuarios = "SELECT count(rut) AS cantidad FROM usuario WHERE fechaNacim < '2005/01/01' AND fechaNacim > '1961/01/01'";
         $adultoUsuarios = $conexion->query($adultoUsuarios);
         $fila2 = mysqli_fetch_assoc($adultoUsuarios);
-        $adultoMayorUsuarios = "SELECT count(rut) AS cantidad FROM usuario WHERE fechaNacim < '01/01/1961'";
+        $adultoMayorUsuarios = "SELECT count(rut) AS cantidad FROM usuario WHERE fechaNacim <= '1961/01/01'";
         $adultoMayorUsuarios = $conexion->query($adultoMayorUsuarios);
         $fila3 = mysqli_fetch_assoc($adultoMayorUsuarios);
     ?>

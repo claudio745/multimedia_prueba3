@@ -6,3 +6,5 @@
 [Aviso][22-12-2022 02:29:01]:Inicio sesion Medico con el rut: 20955812-4
 [Aviso][22-12-2022 13:15:33]:Inicio sesion Administrador con el rut: 20904525-7
 [Aviso][22-12-2022 13:19:19]:Inicio sesion Administrador con el rut: 20904525-7
+[Aviso][22-12-2022 13:34:43]:Inicio sesion Administrador con el rut: 20904525-7
+[Aviso][22-12-2022 13:35:16]:Inicio sesion Medico con el rut: 20904525-k
