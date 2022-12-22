@@ -66,13 +66,20 @@
 
                             <div class="row">
                                 <div class="col-10 mt-4">
-                                    <h1><?php echo $mostrar['nombres']?></h1>
-                                    <h2><?php echo $mostrar['apellido1']?></h2>
-                                    <h5><?php echo $mostrar['apellido2']?></h5>
-                                    <h6><?php echo $mostrar['genero']?></h6>
-                                    <h6><?php echo $mostrar['fechaNacim']?></h6>
-                                    <h6><?php echo $mostrar['ciudadResid']?></h6>
-                                    <h6><?php echo $mostrar['correo']?></h6>
+                                    <td>Nombre completo:
+                                    <h6><?php echo $mostrar['nombres']?></h6></td>
+                                    <td>Apellido paterno:
+                                    <h6><?php echo $mostrar['apellido1']?></h6></td>
+                                    <td>Apellido materno:
+                                    <h6><?php echo $mostrar['apellido2']?></h6></td>
+                                    <td>Genero:
+                                    <h6><?php echo $mostrar['genero']?></h6></td>
+                                    <td>Fecha de nacimiento:
+                                    <h6><?php echo $mostrar['fechaNacim']?></h6></td>
+                                    <td>Ciudad de residensia:
+                                    <h6><?php echo $mostrar['ciudadResid']?></h6></td>
+                                    <td>Correo:
+                                    <h6><?php echo $mostrar['correo']?></h6></td>
                                 </div>
                             </div>
                             <?php
